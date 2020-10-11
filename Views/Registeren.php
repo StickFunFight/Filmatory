@@ -11,7 +11,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.php">Filmaotry</a>
+    <a class="navbar-brand" href="../Index.php"">Filmatory</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,13 +19,47 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="Views/Registeren.php">Registeren <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="Registeren.php">Registeren <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="Views/Inloggen.php">Inloggen <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="Inloggen.php">Inloggen <span class="sr-only">(current)</span></a>
             </li>
     </div>
 </nav>
 </header>
+<div class="container" style="margin-top: 3%">
+
+<form method="POST">
+    <div class="form-group">
+        <label for="Name">Naam</label>
+        <input type="Text" class="form-control" name="TxtName" placeholder="Naam">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" name="TxtPassword" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" name="TxtEmail" aria-describedby="emailHelp" placeholder="Email">
+    </div>
+    <input type="submit" id="SubmitButton" name="SubmitButton" value="Versturen" class="btn btn-primary">
+</form>
+    <!-- Content here -->
+
+
+    <?php
+    include '../functions/controller/AccountController.php';
+    $UserController = new AccountController();
+//TODO STYLING.
+    if(isset($_POST['SubmitButton'])){
+        $UserName = $_POST['TxtName'];
+        $UserPassword = $_POST['TxtPassword'];
+        $UserEmail = $_POST['TxtEmail'];
+
+        $UserController->SetAccount($UserName, $UserPassword, $UserEmail);
+    }
+    ?>
+
+</div>
 </body>
 </html>

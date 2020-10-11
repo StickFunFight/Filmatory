@@ -74,6 +74,8 @@
       <updated>1601905179271</updated>
       <workItem from="1601905181109" duration="627000" />
       <workItem from="1601991532217" duration="3402000" />
+      <workItem from="1602152229298" duration="601000" />
+      <workItem from="1602410569834" duration="9129000" />
     </task>
     <servers />
   </component>
@@ -93,9 +95,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1601994669214">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="1007" y="571" key="NewPhpFileDialog" timestamp="1602417618652">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1601994669214" />
+    <state x="1007" y="571" key="NewPhpFileDialog/0.0.2560.1400/-1920.208.1920.1040@0.0.2560.1400" timestamp="1602417618652" />
   </component>
 </project>
