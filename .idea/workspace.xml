@@ -38,6 +38,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -57,6 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -75,7 +77,7 @@
       <workItem from="1601905181109" duration="627000" />
       <workItem from="1601991532217" duration="3402000" />
       <workItem from="1602152229298" duration="601000" />
-      <workItem from="1602410569834" duration="9129000" />
+      <workItem from="1602410569834" duration="13129000" />
     </task>
     <servers />
   </component>
@@ -95,6 +97,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602423074117">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.208.1920.1040@0.0.2560.1400" timestamp="1602423074117" />
     <state x="1007" y="571" key="NewPhpFileDialog" timestamp="1602417618652">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
