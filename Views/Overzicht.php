@@ -9,5 +9,7 @@ if (isset($_SESSION["UserId"])) {
     header("Location: Inloggen.php");
 }
 require "Menu.html";
+?>
+
 
 
