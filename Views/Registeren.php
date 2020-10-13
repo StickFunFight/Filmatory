@@ -49,6 +49,7 @@
 
     <?php
     include '../functions/controller/AccountController.php';
+    include '../functions/Models/EntAchievement.php';
     $UserController = new AccountController();
 //TODO STYLING.
     if(isset($_POST['SubmitButton'])){

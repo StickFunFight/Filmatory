@@ -18,7 +18,7 @@ Class AccountDatabase{
         $stm->bindParam(2, $UserPassword);
         $stm->bindParam(3, $userEmail);
         if ($stm->execute()) {
-            header('Location: Inloggen.php');
+            //eader('Location: Inloggen.php');
         }else{
            echo "Ging iets fout";
         }
@@ -42,4 +42,17 @@ Class AccountDatabase{
                 echo "Wachtwoord of de naam is fout.";
             }
     }
+
+    public function GetLastInsertedId($Email){
+        $query = "SELECT Id FROM user WHERE email = ?";
+        $stm = $this->conn->prepare($query);
+        $stm->bindParam(1, $Email);
+        if($stm->execute()) {
+            $result = $stm->fetch(PDO::FETCH_OBJ);
+            $id = $result->Id;
+            var_dump($id);
+          return $id;
+  }
+    }
+
 }

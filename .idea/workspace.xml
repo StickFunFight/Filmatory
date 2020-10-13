@@ -79,6 +79,7 @@
       <workItem from="1602152229298" duration="601000" />
       <workItem from="1602410569834" duration="13129000" />
       <workItem from="1602423941078" duration="332000" />
+      <workItem from="1602578355856" duration="8147000" />
     </task>
     <servers />
   </component>
@@ -98,14 +99,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1073" y="409" key="#com.intellij.ide.util.MemberChooser" timestamp="1602582089548">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1073" y="409" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1920.208.1920.1040@0.0.2560.1400" timestamp="1602582089548" />
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602423074117">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.208.1920.1040@0.0.2560.1400" timestamp="1602423074117" />
-    <state x="1007" y="571" key="NewPhpFileDialog" timestamp="1602417618652">
+    <state x="1007" y="571" key="NewPhpFileDialog" timestamp="1602586102369">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1601994669214" />
-    <state x="1007" y="571" key="NewPhpFileDialog/0.0.2560.1400/-1920.208.1920.1040@0.0.2560.1400" timestamp="1602417618652" />
+    <state x="1007" y="571" key="NewPhpFileDialog/0.0.2560.1400/-1920.208.1920.1040@0.0.2560.1400" timestamp="1602586102369" />
+    <state x="-1920" y="208" width="1842" height="1047" key="dock-window-1" timestamp="1602583992632">
+      <screen x="-1920" y="208" width="1920" height="1040" />
+    </state>
+    <state x="-1920" y="208" width="1842" height="1047" key="dock-window-1/0.0.2560.1400/-1920.208.1920.1040@0.0.2560.1400" timestamp="1602583992632" />
+    <state x="-1920" y="208" width="1842" height="1127" key="dock-window-2" timestamp="1602584633920">
+      <screen x="-1920" y="208" width="1920" height="1040" />
+    </state>
+    <state x="-1920" y="208" width="1842" height="1127" key="dock-window-2/0.0.2560.1400/-1920.208.1920.1040@0.0.2560.1400" timestamp="1602584633920" />
   </component>
 </project>
