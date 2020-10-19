@@ -17,7 +17,6 @@ class AccountController
     public function SetAccount($Name, $Password, $email)
     {
     $this->db->AccountAanmaken($Name, $Password, $email);
-    echo "Wow";
     $this->SetAdchievement($email);
     }
 
