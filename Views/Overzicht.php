@@ -30,7 +30,7 @@ require "Menu.html";
                 <p class="card-text">
                     Klik hier om je voorkeur op tegeven kwa films.
                 </p>
-                <a href="#" class="btn btn-primary">Voorkeur</a>
+                <a href="Voorkeur.php" class="btn btn-primary">Voorkeur</a>
             </div>
         </div>
     </div>

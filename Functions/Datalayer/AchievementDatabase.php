@@ -30,6 +30,28 @@ Class AchievementDatabase
         }
     }
 
+    public function GetAllAchievementUser($id)
+    {
+        $lijst = array();
+        $query = "Select achievement.Id, achievement.AchievementName, achievement.AchievementDiscription
+        from achievement_user
+        left JOIN achievement on achievement_user.AchievementId = achievement.Id
+        where achievement_user.UserId = $id";
+        $stm = $this->conn->prepare($query);
+        if ($stm->execute()) {
+            $result = $stm->fetchAll(PDO::FETCH_OBJ);
+            foreach ($result as $item) {
+                // Hier stonden de entiteit class functies maar hij wilde de database kolom namen
+                $entAchievement = new EntAchievement($item->Id, $item->AchievementName, $item->AchievementDiscription);
+                array_push($lijst, $entAchievement);
+            }
+            return $lijst;
+
+        } else {
+            echo "oef foutje";
+        }
+    }
+
     public function SetAllAdchievement($Id)
     {
         $achievementList = $this->GetAllAchievement();

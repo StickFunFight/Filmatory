@@ -14,6 +14,15 @@ class AchievementController
     public Function SetAdchievement($Id)
     {
         $this->db->SetAllAdchievement($Id);
+
+    }
+
+    public function GetAllAchievements($Id){
+        $lijst = array();
+
+        $lijst = $this->db->GetAllAchievementUser($Id);
+
+        return $lijst;
     }
 
 }
