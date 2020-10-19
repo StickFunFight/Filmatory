@@ -3,7 +3,6 @@
 Class MovieDatabase
 {
     private $conn;
-    private $lijst = array();
 
     public function __construct()
     {
@@ -14,6 +13,7 @@ Class MovieDatabase
 
     public function GetRandomMovies()
     {
+            $lijst = array();
             $query = "SELECT * FROM movies ORDER BY RAND() LIMIT 10";
             $stm = $this->conn->prepare($query);
             if ($stm->execute()) {
