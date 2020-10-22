@@ -16,8 +16,8 @@ class AccountController
 
     public function SetAccount($Name, $Password, $email)
     {
-    $this->db->AccountAanmaken($Name, $Password, $email);
-    $this->SetAdchievement($email);
+        $this->db->AccountAanmaken($Name, $Password, $email);
+        $this->SetAdchievement($email);
     }
 
     public function Login($Password, $email)
@@ -25,7 +25,7 @@ class AccountController
         $this->db->userLogin($Password, $email);
     }
 
-    public Function SetAdchievement($email)
+    public function SetAdchievement($email)
     {
         $this->Adb->SetAllAdchievement($this->db->GetLastInsertedId($email));
     }

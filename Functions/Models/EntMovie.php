@@ -1,6 +1,7 @@
 <?php
 
-class EntMovie{
+class EntMovie
+{
 
     public $movieId;
     public $title;
@@ -67,5 +68,9 @@ class EntMovie{
         $this->genres = $genres;
     }
 
+    public function __toString() {
+        return $this->genres;
+
+    }
 
 }

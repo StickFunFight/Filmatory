@@ -1,6 +1,7 @@
 <?php
 
-class EntAchievement{
+class EntAchievement
+{
 
     public $id;
     public $AchievementName;

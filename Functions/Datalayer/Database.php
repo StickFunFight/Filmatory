@@ -1,6 +1,8 @@
 <?php
+
 // Class aanmaken
-class Database {
+class Database
+{
 
     // Variabele aanmaken voor de connectie
     public $conn;
@@ -14,7 +16,8 @@ class Database {
     private $password = '';
 
     // Connectie maken
-    public function getConnection() {
+    public function getConnection()
+    {
         $this->conn = null;
 
         // Kijken of de connectie gemaakt kan worden en anders een foutmelding geven
@@ -27,4 +30,5 @@ class Database {
         return $this->conn;
     }
 }
+
 ?>

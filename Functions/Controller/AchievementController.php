@@ -11,13 +11,14 @@ class AchievementController
         $this->db = new AchievementDatabase();
     }
 
-    public Function SetAdchievement($Id)
+    public function SetAdchievement($Id)
     {
         $this->db->SetAllAdchievement($Id);
 
     }
 
-    public function GetAllAchievements($Id){
+    public function GetAllAchievements($Id)
+    {
         $lijst = array();
 
         $lijst = $this->db->GetAllAchievementUser($Id);

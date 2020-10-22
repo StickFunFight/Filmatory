@@ -17,9 +17,9 @@ require "Menu.html";
     include '../functions/controller/AchievementController.php';
     include '../functions/Models/EntAchievement.php';
     $AchievementController = new AchievementController();
-   $Achievements = $AchievementController->GetAllAchievements($UserID);
+    $Achievements = $AchievementController->GetAllAchievements($UserID);
 
-    foreach($Achievements as $item){
+    foreach ($Achievements as $item) {
         $id = $item->getId();
         $AchievementName = $item->getAchievementName();
         $AchievementDesc = $item->getAchievementDiscription();
@@ -27,12 +27,12 @@ require "Menu.html";
         echo '<table class="border border-danger" style="width: 100%; background-color: #a9aea9">';
         echo '<tr>';
         echo '<td>';
-        echo '<b>'. $AchievementName = $item->getAchievementName() . '</b>';
+        echo '<b>' . $AchievementName = $item->getAchievementName() . '</b>';
         echo '</td>';
         echo '</tr>';
         echo '<tr>';
         echo '<td>';
-        echo    $AchievementDesc = $item->getAchievementDiscription();
+        echo $AchievementDesc = $item->getAchievementDiscription();
         echo '</td>';
         echo '</tr>';
         echo '</table>';

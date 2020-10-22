@@ -1,6 +1,7 @@
 <?php
 
-class MovieDatabase
+
+class UserDatabase
 {
     private $conn;
 
@@ -11,10 +12,26 @@ class MovieDatabase
         $this->conn = $database->getConnection();
     }
 
-    public function GetRandomMovies()
+    public function SetMovieLiking($UserId, $MovieId)
+    {
+        $query = "INSERT INTO userliking (UserId,MovieId) VALUES (?,?)";
+        $stm = $this->conn->prepare($query);
+        $stm->bindParam(1, $UserId);
+        $stm->bindParam(2, $MovieId);
+        if ($stm->execute()) {
+            //TODO hier moet nog wat hippe logica
+        } else {
+            echo "Ging iets fout";
+        }
+    }
+
+    public function GetLikedMvovies($UserId)
     {
         $lijst = array();
-        $query = "SELECT * FROM movies ORDER BY RAND() LIMIT 10";
+        $query = "Select movies.movieId,movies.title, movies.genres
+                From movies
+                INNER JOIN userliking ON movies.movieId = userliking.MovieId 
+                WHERE UserId = $UserId";
         $stm = $this->conn->prepare($query);
         if ($stm->execute()) {
             $result = $stm->fetchAll(PDO::FETCH_OBJ);

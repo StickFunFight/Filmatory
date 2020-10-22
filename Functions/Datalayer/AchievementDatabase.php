@@ -1,6 +1,6 @@
 <?php
 
-Class AchievementDatabase
+class AchievementDatabase
 {
     private $conn;
 
