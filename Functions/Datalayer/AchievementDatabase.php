@@ -20,7 +20,7 @@ class AchievementDatabase
             $result = $stm->fetchAll(PDO::FETCH_OBJ);
             foreach ($result as $item) {
                 // Hier stonden de entiteit class functies maar hij wilde de database kolom namen
-                $entAchievement = new EntAchievement($item->Id, $item->AchievementName, $item->AchievementDiscription);
+                $entAchievement = new EntAchievement($item->Id, $item->AchievementName, $item->AchievementDiscription, 0);
                 array_push($lijst, $entAchievement);
             }
             return $lijst;
@@ -33,7 +33,7 @@ class AchievementDatabase
     public function GetAllAchievementUser($id)
     {
         $lijst = array();
-        $query = "Select achievement.Id, achievement.AchievementName, achievement.AchievementDiscription
+        $query = "Select achievement.Id, achievement.AchievementName, achievement.AchievementDiscription, achievement_user.Done
         from achievement_user
         left JOIN achievement on achievement_user.AchievementId = achievement.Id
         where achievement_user.UserId = $id";
@@ -42,7 +42,7 @@ class AchievementDatabase
             $result = $stm->fetchAll(PDO::FETCH_OBJ);
             foreach ($result as $item) {
                 // Hier stonden de entiteit class functies maar hij wilde de database kolom namen
-                $entAchievement = new EntAchievement($item->Id, $item->AchievementName, $item->AchievementDiscription);
+                $entAchievement = new EntAchievement($item->Id, $item->AchievementName, $item->AchievementDiscription, $item->Done);
                 array_push($lijst, $entAchievement);
             }
             return $lijst;
@@ -65,6 +65,18 @@ class AchievementDatabase
             $stm->bindParam(1, $achievementID);
             $stm->bindParam(2, $Id);
             $stm->execute();
+            header('Location: Inloggen.php');
+        }
+    }
+    public function SetAchievement($UserId, $AchievemnentId){
+        try {
+            $query = "UPDATE achievement_user SET Done =1 WHERE UserId = ? AND AchievementId = ?";
+            $stm = $this->conn->prepare($query);
+            $stm->bindParam(1, $UserId);
+            $stm->bindParam(2, $AchievemnentId);
+            $stm->execute();
+        }catch (Exception $e){
+            var_dump($e);
         }
     }
 }

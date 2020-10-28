@@ -8,7 +8,7 @@ if (isset($_SESSION["UserId"])) {
     // Sending user to login page
     header("Location: Inloggen.php");
 }
-require "Menu.html";
+require "Menu.php";
 ?>
 <form method="post">
     <div class="container">

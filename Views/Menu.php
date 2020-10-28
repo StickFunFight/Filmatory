@@ -19,6 +19,7 @@
 </head>
 <body>
 <header>
+    <form method="post">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <a class="navbar-brand" href="Overzicht.php">
@@ -36,9 +37,13 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
+                    <li class="nav-item active">
+                        <input type="submit" class="btn btn-warning" name="BtnUitloggen" value="Uitloggen">
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../EasterEgg/index.php" style="color:#343a40; margin-left: 100%">EasterEgg</a>
                 </ul>
+                </li>
             </div>
         </div>
     </nav>
@@ -46,6 +51,13 @@
     <div class="container">
 
     </div>
+        </form>
 </header>
 </body>
 </html>
+<?php
+if (isset($_POST['BtnUitloggen'])) {
+    session_destroy();
+    header("Location: Inloggen.php");
+}
+?>

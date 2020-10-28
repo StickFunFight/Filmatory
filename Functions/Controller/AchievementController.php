@@ -26,4 +26,13 @@ class AchievementController
         return $lijst;
     }
 
+    public function InsertAchievment($genre, $UserID){
+
+        if (in_array("Horror", $genre)) {
+            $this->db->SetAchievement($UserID, 1);
+        }
+        if(in_array("Comedy", $genre)){
+            $this->db->SetAchievement($UserID, 2);
+        }
+    }
 }

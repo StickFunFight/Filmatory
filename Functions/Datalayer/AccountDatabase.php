@@ -19,7 +19,7 @@ class AccountDatabase
         $stm->bindParam(2, $UserPassword);
         $stm->bindParam(3, $userEmail);
         if ($stm->execute()) {
-            //eader('Location: Inloggen.php');
+            //header('Location: Inloggen.php');
         } else {
             echo "Ging iets fout";
         }
@@ -53,7 +53,6 @@ class AccountDatabase
         if ($stm->execute()) {
             $result = $stm->fetch(PDO::FETCH_OBJ);
             $id = $result->Id;
-            var_dump($id);
             return $id;
         }
     }

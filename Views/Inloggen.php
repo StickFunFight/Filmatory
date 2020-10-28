@@ -34,7 +34,6 @@
             </li>
     </div>
 </nav>
-</header>
 <div class="container" style="margin-top: 3%">
 
     <form method="POST">

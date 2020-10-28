@@ -8,7 +8,7 @@ if (isset($_SESSION["UserId"])) {
     // Sending user to login page
     header("Location: Inloggen.php");
 }
-require "Menu.html";
+require "Menu.php";
 
 ?>
 
@@ -23,8 +23,17 @@ require "Menu.html";
         $id = $item->getId();
         $AchievementName = $item->getAchievementName();
         $AchievementDesc = $item->getAchievementDiscription();
+        $AchievementDone = $item->getADone();
 
-        echo '<table class="border border-danger" style="width: 100%; background-color: #a9aea9">';
+        if($AchievementDone == 1){
+            $BorderGehaald= "border-success";
+        }
+        else{
+            $BorderGehaald ="border-warning";
+        }
+
+
+        echo '<table class="border  '.$BorderGehaald.'" style="width: 100%; background-color: #a9aea9">';
         echo '<tr>';
         echo '<td>';
         echo '<b>' . $AchievementName = $item->getAchievementName() . '</b>';

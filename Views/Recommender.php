@@ -8,11 +8,13 @@ if (isset($_SESSION["UserId"])) {
     // Sending user to login page
     header("Location: Inloggen.php");
 }
-require "Menu.html";
+require "Menu.php";
 include '../Functions/Controller/RecommenderController.php';
+include '../Functions/Controller/AchievementController.php';
 include '../Functions/Models/EntRating.php';
 
 $UserC = new RecommenderController();
+$Achievement = new AchievementController();
 
 $lijst = $UserC->GetLikedMovies($UserID);
 //Haal alle films op die de gebruiker leuk vind.
@@ -45,6 +47,10 @@ shuffle($result);
 //Gooi de lijst even lekker door elkaar.
 $SixRandomArray = array_slice($result, 0, 6);
 //pak 6 films uit de lijst.
+
+//stuur genres door voor achievements.
+$Achievement->InsertAchievment($Genres, $UserID);
+
 ?>
 <form method="post">
     <div class="container">
